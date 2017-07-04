@@ -1,2 +1,3 @@
 222
 updata file 
+lab:reset commit --soft
