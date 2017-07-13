@@ -1,0 +1,66 @@
+@charset "UTF-8";
+@mixin btn($btnPaddingLR){
+.btn{
+        font-family: "微軟正黑體";
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        background-color: #66DBFF;
+        border-radius: 20px;
+        padding: 10px $btnPaddingLR;
+        font-size: 20px;
+        border: 1px solid #66DBFF;
+        text-align: center;
+        transition: all 0.3s ease-out;
+        @content;
+        &:hover{
+            background-color: #fff;
+            color: #66DBFF;
+        }      
+    }   
+
+}
+
+@mixin btn_1($btnPaddingLR,$btnColor){
+.btn{
+        font-family: "微軟正黑體";
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        background-color: $btnColor;
+        border-radius: 20px;
+        padding: 10px $btnPaddingLR;
+        font-size: 20px;
+        border: 1px solid $btnColor;
+        text-align: center;
+        transition: all 0.3s ease-out;
+        &:hover{
+            background-color: #fff;
+            color: $btnColor;            
+        }      
+        &:hover i{            
+            color: $btnColor;            
+        }      
+    }   
+
+}
+
+@mixin btn_2($btnPaddingTB,$btnPaddingLR,$btnColor){
+
+        font-family: "微軟正黑體";
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        background-color: $btnColor;
+        border-radius: 20px;
+        padding: $btnPaddingTB $btnPaddingLR;
+        font-size: 20px;
+        border: 1px solid $btnColor;
+        text-align: center;
+        transition: all 0.3s ease-out;
+        &:hover{
+            background-color: #fff;
+            color: $btnColor;
+        }             
+
+}

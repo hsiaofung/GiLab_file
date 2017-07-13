@@ -1,0 +1,29 @@
+div{
+	//outline: 1px solid red;
+}
+img{
+	//width: inherit;
+	//width:10%;
+}
+li{
+   display: inline-block;	
+   margin-right: 10px;
+}
+.column-4{
+	box-sizing: border-box;
+	padding:  10px;
+}
+#imgUpload{
+	width: 100px;
+	height: 100px;
+	background-color: #ccc;
+	outline: 1px solid red;
+}
+td{
+	outline: 1px solid blue;
+}
+#tr-imgUpload td{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}

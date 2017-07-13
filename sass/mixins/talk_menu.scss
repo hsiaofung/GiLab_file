@@ -1,0 +1,36 @@
+@mixin talk_menu(){
+    @include select_1('#select-xs'){
+            display: "";
+            text-align: center;
+            padding: 10px;            
+            margin: auto;
+            color: #888;
+     };
+     .r2 {
+         .text-type{
+         box-shadow: 1px 1px 3px rgba(64,64,64, .3);
+         position: fixed;
+         top:0px;
+         left: 0;
+         z-index: 555;
+         
+         }
+     }
+     .r2 {
+        .btn-text{
+         box-shadow: 1px -1px 3px rgba(64,64,64, .3);
+         position: fixed;
+         bottom:0px;
+            left: 0;
+            z-index: 555;
+            .btn{
+               border-left: 1px solid #ccc;
+               border-right: 1px solid #ccc;
+               padding: 5px 20px;
+               color: #888;
+                    
+            }
+            
+        }
+     }
+}

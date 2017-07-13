@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+@mixin text1($nums, $colors, $opa, $dir: null) {
+    font-size: $nums;
+    color: $colors;
+    margin-right: 20px;
+    text-align: $dir;
+    opacity: $opa;
+}
+@mixin text2($num-list, $nums, $colors, $opa, $dir:null ){ 
+   #{$num-list}{     
+      font-size: $nums;
+      color: $colors;
+      margin-right: 20px;
+      text-align: $dir;
+      opacity: $opa;
+      @content;     
+  }
+}
+@mixin text3($num-list, $nums, $colors, $opa:null, $dir:null ){ 
+   #{$num-list}{     
+      font-size: $nums;
+      color: $colors;
+      // margin-right: 20px;
+      text-align: $dir;
+      opacity: $opa;
+      @content;     
+  }
+}
+@mixin text4($num-list, $colors, $nums:null, $opa:null, $dir:null ){ 
+   #{$num-list}{     
+      font-size: $nums;
+      color: $colors;
+      // margin-right: 20px;
+      text-align: $dir;
+      opacity: $opa;
+      @content;     
+  }
+}
+
+@mixin fstyle($font-base){
+    p {
+        font-size: $font-base;
+    }
+    h1 {
+        font-size: $font-base * 2.4; //24px
+        padding: 20px 0;
+    }
+    h2 {
+        font-size: $font-base * 1.4; //21px
+    }
+    h3 {
+        font-size: $font-base * 1.3333; //21px
+    }
+    h4 {
+        font-size: $font-base * 1.06666; //16px
+    }
+    %fz20 {
+        font-size: $font-base * 1.33333;
+    }
+}
+    

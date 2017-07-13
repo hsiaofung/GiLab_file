@@ -1,0 +1,80 @@
+@mixin row($rowWidth,$rowPaddingLR,$rowPaddingTB){
+    .row{
+        width: 100%;
+        max-width: $rowWidth;     
+        font-size: 1em;
+        border:0.1875em solid #fff;        
+        padding-left:$rowPaddingLR;
+        // padding-right:$rowPaddingLR;
+        padding-right:0px;
+        padding-top: $rowPaddingTB;
+        padding-bottom: $rowPaddingTB;
+        box-sizing:border-box;
+        line-height:1.5em;
+        @content;
+            &:after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+    }
+}
+
+@mixin row_1($rowWidth,$rowPaddingLR,$rowPaddingTB){
+    .row{
+        width: 100%;
+        max-width: $rowWidth;     
+        font-size: 1em;
+        //border:0.1875em solid #fff;        
+        padding-left:$rowPaddingLR;
+        // padding-right:$rowPaddingLR;
+        padding-right:0px;
+        padding-top: $rowPaddingTB;
+        padding-bottom: $rowPaddingTB;
+        box-sizing:border-box;
+        line-height:1.5em;
+        text-align: center;
+        margin: auto;
+        @content;
+            &:after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+    }
+}
+
+@mixin row_2($rowList,$rowWidth,$rowPaddingTB){
+    #{$rowList}{
+        width: 100%;
+        max-width: $rowWidth;     
+        font-size: 1em;
+        padding: 0;
+        padding-top: $rowPaddingTB;
+        margin-bottom:15px;        
+        // box-sizing:border-box;
+        line-height:1.5em;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        @content;
+            &:after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+    }
+}
+@mixin row_3(){
+    .row{
+        // margin-left: -15px;
+	    // margin-right: -15px;
+        text-align: center;       
+
+    }
+    
+}
+
+        
+                
+            	

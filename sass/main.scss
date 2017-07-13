@@ -1,0 +1,342 @@
+@charset "UTF-8";
+@import "base/var";
+@import "mixins/mixin";
+@import "layout/mobile";
+@import "layout/desktop";
+body {
+    font-family: "微軟正黑體";
+    font-size: 15px;
+}
+
+@include grid-line(20);
+$li-amount: 7;
+@while $li-amount > 5 {
+    li:nth-child(#{$li-amount}) {
+        margin-left: 1px * $li-amount;
+    }
+    $li-amount: $li-amount - 1;
+}
+
+
+
+//=================== talk 02==================
+
+
+// ======= talk 01========================
+@include wrapper(talk-01) {
+    // display:none;
+    
+    p {
+        font-size: $font-base;
+    }
+    h1 {
+        font-size: $font-base * 1.33333;
+    }
+    h2 {
+        font-size: $font-base * 1.2;
+    }
+    %fz20 {
+        font-size: $font-base * 1.33333;
+    }
+    input {
+        border-radius: 10px;
+        width: 100%;
+        max-width: 277.868px;
+        font-size: 18px;
+        padding: 0;
+        border: none;
+        font-family: "微軟正黑體";
+    }
+    select {
+        font-size: 18px;
+        border-radius: 10px;
+        padding: 0;
+        width: 100%;
+        max-width: 277.868px;
+        border: none;
+        font-family: "微軟正黑體";
+    }
+    input[type='button'] {
+        border-radius: 20px;
+        background-color: #66DBFF;
+        font-size: 18px;
+        color: #fff;
+        width: 144.499px;
+        // height: 10px;
+        margin-left: 73px;
+        font-family: "微軟正黑體";
+    }
+    li {
+        display: inline-block;
+        margin-left: 9.933%;
+    }
+    textarea {
+        @extend %fz20;
+        border-radius: 10px;
+        width: 100%;
+        border: none;
+        font-family: "微軟正黑體";
+    }
+    .box-01 {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .5);
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .content {
+        width: 100%;
+        max-width: 734.788px;
+        background-color: #fff;
+        position: absolute;
+        border-radius: 10px;
+    }
+    .btn-close {
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+    }
+    #btn-left{
+        padding-top: 30%;
+        padding-left: 50%;
+    }
+    #btn-right {
+        padding-top: 30%;
+        padding-left:0px;
+        // outline: 1px solid red;
+    }
+    $row_num:6;
+    @for $i from 1 through $row_num {
+        @if $i==1 {
+            .r#{$i} {
+                border-radius: 10px 10px 0px 0px;
+                background-color: #B2DAED;
+                border: none;
+                max-width: 734.788px;
+                text-align: center;
+            }
+        }
+        @else {
+            @if $i==6 {
+                .r#{$i} {
+                    border-radius: 0px 0px 10px 10px;
+                    background-color: #fff;
+                    text-align: center;
+                    padding-top: 0px;
+                }
+            }
+            @else {
+                .r#{$i} {
+                    border-radius: 10px;
+                    background-color: #E0F0F8;
+                    box-shadow: 1px 1px 3px #ccc;
+                    border: none;
+                }
+            }
+        }
+    }
+    #imgUpLoad {
+        border-radius: 10px;
+        background-color: #fff;
+        border: none;
+        max-width: 125px;
+        width: 100%;
+        img{
+        width: 100%;
+        }
+    }
+    #t001 {
+        margin-left: 0px;
+    }
+    .rr1,
+    .rr2 {
+        padding: 0px;
+        border: 0px;
+    }
+}
+
+// ===================end of talk 01=============
+// ==================================
+// h1 {
+//     font-size: $num;
+//     color: $red-color;
+// }
+// h2 {
+//     font-size: $num;
+//     color: $blue-color;
+// }
+// .img {
+//     margin-top: 20px;
+// }
+// .text {
+//     padding: 20px;
+// }
+// h1 {
+//     font-size: 10px + 20;
+//     width: 20px + 10px;
+// }
+// $var01: 20;
+// h2 {
+//     font-size: $var01 + px;
+//     width: 20px - 10px;
+// }
+// h3 {
+//     font-size: 10px + 20 * 20px;
+//     width: 2em + 10em;
+//     padding: 2em * 10;
+// }
+// h4 {
+//     font: (50px / 5px);
+// }
+// h3 {
+//     font-size: floor($font-base * 1.8);
+// }
+// h4 {
+//     font-size: ceil($font-base * 1.8);
+// }
+// h5 {
+//     font-size: round($font-base * 1.8);
+// }
+// ========== nesting=============
+//.box{
+//  .row{
+//      .text{
+//          color: $blue-color;
+//          font-size: $small;
+//      }
+//  }
+//}
+// .c1{
+//  @include text1(0.5em, #0f0, 0.3);
+// }
+// .c2{
+//  @include text1(0.8em, #0ff, 0.5);
+// }
+// .c3{
+//  @include text1(1em, #ff0, 0.8);
+// }
+@mixin widths($num-list, $num-width) {
+    #{$num-list} {
+        width: $num-width;
+    }
+}
+
+// @include text1 ('.c1', 0.5em, #0f0, 0.3);
+// @include text1 ('.c2', 0.5em, #0a0, 0.5);
+// @include text1 ('.c3', 0.5em, #0c0, 0.7);
+// @include text1 ('.c4', 0.5em, #070, 0.8);
+// ======= extend==============================
+.c1 {
+    @include text1(0.5em, #0f0, 0.3);
+}
+
+.c2 {
+    @extend .c1;
+}
+
+.c3 {
+    @extend .c1;
+}
+
+// ======= & ===============================
+.c4 {
+    color: pink;
+    & h1 {
+        font-size: 5em;
+    }
+}
+
+// ==== =================
+%c1 {
+    text-align: center;
+    width: 100px;
+    padding: 20px;
+}
+
+.box4 {
+    @extend %c1;
+}
+
+// ======  =================
+// ======= if else ==================
+@mixin box-width($width) {
+    .box-wrapper {
+        @if $width >=100px {
+            width: $width;
+        }
+        @else {
+            width: $width * 2;
+        }
+    }
+}
+
+@include box-width(10px);
+.box {
+    padding-left: 20px;
+}
+
+$for_num: 10;
+@for $i from 1 through $for_num {
+    .col_#{$i} {
+        width: 60px * $i;
+    }
+}
+
+//============ A case of for loop =======================
+@mixin margins($dis, $for_num) {
+    @for $i from 1 through $for_num {
+        .margin-#{$dis}-#{$i} {
+            margin-#{$dis}: $i+px;
+        }
+    }
+}
+
+@include margins(top, 100);
+@include margins(left, 100);
+// =========== each ================================
+@each $name in test1,
+test2,
+test3,
+tim {
+    .#{$name} {
+        background-image:url('images/#{$name}.jpg');
+    }
+}
+
+//============   @mixin style for upload images =======
+@mixin call_image($imageName,
+$for_num) {
+    @for $i from 1 through $for_num {
+        .#{$imageName}#{$i} {
+            background-image:url('images/#{$imageName}#{$i}.jpg');
+        }
+    }
+}
+
+@include call_image(test,
+100);
+//======== mixin + each =========================
+@mixin bg_images($imageName...) {
+    @each $name in $imageName {
+        .#{$name} {
+            background-image:url('images/#{$name}.jpg');
+        }
+    }
+}
+
+@include bg_images(tim1,
+tim2,
+tim3,
+paggy1,
+paggy2);
+// 我
+
+/*  我 */

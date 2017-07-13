@@ -1,0 +1,581 @@
+@charset "UTF-8";
+@import "../base/var";
+@import "../mixins/rwd";
+@import "../mixins/initial";
+@include respond-rwd (desktop) {
+    //================ Talk 04 ======================
+@include wrapper(talk-04) {
+    @include container($talk-04-container-max-with, $talk-04-container-top) {
+        background: #FCF2E2;
+        padding-bottom: 212.877px;
+    }
+    ;
+    @include content_3($talk-04-content-max-width, $talk-04-content-top, 91.516px) {
+        border: 20px solid #DAEABE;
+        box-shadow: 1px 1px 5px rgba(136,136,136,.3);
+        // border:20px solid gray;
+    }
+    ;
+    @include fstyle($font-base); //@font-base
+    @include btn(12px) {
+        line-height: 1em;
+        font-size: 15px;
+    }
+    @include row_1(100%, 0, 0);
+    #pic-top {
+        width: 169.557px;
+        height: 53.27px;
+        margin: auto;
+    }
+    img {
+        width: 100%;
+        // outline: 1px solid blue;
+    }
+    .r1 {
+        .pic-head {
+            border: 17.452px solid #fff;
+            // outline: 1px solid red;
+            border-radius: 10px;
+            box-shadow: 1px 1px 3px #ccc;
+            transform: rotate(11deg);
+        }
+        h2 {
+            background: #fff;
+            padding-bottom: 35px;
+            padding-top: 17px;
+            color: #666;
+        }
+    }
+    @include row_2('.r2', 793.6px, 66px) {
+        position: relative;
+        left: 200px;
+        //  outline:1px solid red;
+        h2 {
+            color: #666;
+        }
+        .col-16 {
+            background: #E0F0F8;
+            border-right: 3px dashed #fff;
+            border-radius: 10px;
+            box-sizing: border-box;
+            box-shadow: 3px 3px 5px #ccc;
+        }
+        .col-4 {
+            border-radius: 10px;
+            background: #E0F0F8;
+            box-shadow: 3px 3px 5px #ccc;
+            .rr2 {
+                width: 137px;
+                height: 295.97px;
+                text-align: left;
+                margin: auto;
+                //  outline: 1px solid red;
+                background: #E0F0F8;
+            }
+            //  img{
+            //      width: 100%;
+            //      height: 100%;
+            //  }
+        }
+        .rr1 {
+            width: 619.609px;
+            background: #B2DAED;
+            border-radius: 10px 10px 0 0;
+            padding: 10px;
+        }
+        .rr2 {
+            line-height: 60px;
+        }
+        $num:3;
+        .content {
+            @for $i from 2 through 4 {
+                .rr#{$i} {
+                    padding-left: 13px;
+                    padding-right: 25px;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    box-shadow: 1px 1px 3px #ccc;
+                    .col-4 {
+                        background: none;
+                        box-shadow: none;
+                    }
+                }
+            }
+            width:482.771px;
+            margin: auto;
+            border: none;
+            padding: 20px 75px;
+            box-shadow: none;
+            color: #666;
+            .row {
+                background: #fff;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                line-height: 60px;
+                img {
+                    width: 100%;
+                    vertical-align: middle;
+                }//end of img
+            }//end of row
+        }//end of content
+    }
+    ; //@list, width, padding top
+    h1 {
+        text-align: center;
+        font-size: $font-base * 2.4;
+        margin: auto;
+        padding: 116px;
+        color: #8A7676;
+    }
+    ul {
+        text-align: left;
+        padding-left: 145px;
+        line-height: 60px;
+    }
+    li {
+        font-size: $font-base * 1.26;
+        color: #666;
+        border-bottom: 1px solid gray;
+        //background-image: url(images/talk04/line.png);
+    }
+    span {
+        outline: 1px solid red;
+    }
+    .col-15 {
+        box-sizing: border-box;
+        padding-right: 50px;
+        text-align: left;
+    }
+    .col-1 {
+        text-align: left;
+        margin-right: 5px;
+        box-sizing: border-box;
+    }
+    .memInfo {
+        li:nth-child(5) {
+            border: none;
+        }
+        li:nth-child(6) {
+            background: #FFEDDB;
+            border-radius: 10px;
+            // color: red;
+            border: none;
+            font-size: 17px;
+            padding: 32.447px 15px;
+            line-height: 2em;
+        }
+    }
+    a {
+        margin-left: 30px;
+    }
+    // li{
+    //   line-height: 10px;
+    // }
+}//end of wrapper talk-04
+    // ===============talk===================
+    @include wrapper(talk) {
+        @include row_1(1280px, 47.333px, 35.334px); //width, left/right, top/bottom        
+        @include btn_1(20px, #FFA266); //paddingLR,bg-color/border-color
+        @include container($talk-container-max-with, $talk-container-top);
+        @include content($talk-content-max-width, $talk-content-top, $talk-content-left); //@max width, padding-top, padding-left    
+        #select-xs{
+            display: none;
+        }
+        .lightbox{
+            .talk-01{
+                .box-01{
+                    .content{
+                        padding-top: 0;
+                    }
+                }
+            }
+        }
+        
+        p {
+            font-size: $font-base;
+        }
+        h1 {
+            font-size: $font-base * 2.4; //24px
+            padding: 20px 0;
+        }
+        h2 {
+            font-size: $font-base * 1.4; //21px
+        }
+        h3 {
+            font-size: $font-base * 1.3333; //21px
+        }
+        h4 {
+            font-size: $font-base * 1.06666; //16px
+        }
+        %fz20 {
+            font-size: $font-base * 1.33333;
+        }
+        $row_num:6;
+        @for $i from 1 through $row_num {
+            @if $i==1 {
+                .r#{$i} {
+                    background-color: #C2E4EC;
+                    padding-bottom: 26.334px;
+                }
+            }
+            @else if $i==2 {
+                .r#{$i} {
+                    background-color: #B2DEEB;
+                    padding-top: 10px;
+                    padding-left: 41px;
+                    padding-bottom: 10px;
+                }
+            } //end of else if $i==2
+            @else {
+                @include row_2('.r#{$i}', 1200px, 15px);
+            }
+        } //end of for
+        .col-5 {
+            box-sizing: border-box;
+            padding: 0 15px;
+            position: relative;
+            .type {
+                background-color: #4CBCC2;
+                color: #fff;
+                padding: 2px 10px;
+                position: absolute;
+                top: 30px;
+                left: 0;
+                z-index: 2;
+            }
+            .type:after {
+                content: "";
+                display: block;
+                position: absolute;
+                right: -13px;
+                top: 0;
+                border-top: 13px solid #4CBCC2;
+                border-right: 13px solid transparent;
+                border-bottom: 13px solid #4CBCC2;
+            }
+            &:nth-of-type(4n+1) {
+                .imgBox {
+                    height: 330px;
+                    overflow: hidden;
+                }
+                .type {
+                    background-color: #4CBCC2;
+                }
+                .type:after {
+                    border-top-color: #4CBCC2;
+                    border-bottom-color: #4CBCC2;
+                }
+            }
+            &:nth-of-type(4n+2) {
+                .imgBox {
+                    height: 200px;
+                    overflow: hidden;
+                }
+                .type {
+                    background-color: #D566A0;
+                }
+                .type:after {
+                    border-top-color: #D566A0;
+                    border-bottom-color: #D566A0;
+                }
+            }
+            &:nth-of-type(4n+3) {
+                .imgBox {
+                    height: 162px;
+                    overflow: hidden;
+                }
+                .type {
+                    background-color: #FFA266;
+                }
+                .type:after {
+                    border-top-color: #FFA266;
+                    border-bottom-color: #FFA266;
+                }
+            }
+            &:nth-of-type(4n) {
+                .imgBox {
+                    height: 265px;
+                    overflow: hidden;
+                }
+                .type {
+                    background-color: #7FC597;
+                }
+                .type:after {
+                    border-top-color: #7FC597;
+                    border-bottom-color: #7FC597;
+                }
+            }
+            // $num:3;
+            // @for $i from 0 through $num{
+            //     &:nth-of-type(4n+#{$i}){
+            //         .imgBox{                
+            //             overflow: hidden;
+            //             height: 162px+random(500);
+            //         }
+            //     }
+            // }
+            img {
+                width: 100%;
+                //transition: 0.5s cubic-bezier(.18,.06,1.66);
+                transition: 0.5s;
+                transform: scale(1, 1);
+                &:hover {
+                    transform: scale(1.2, 1.2);
+                }
+            }
+            a {
+                text-decoration: none;
+            }
+            @include content_1(240px, 0, 0) {
+                background: #fff;
+            }
+            ;
+            // .imgBox{
+            //     height: 330px;
+            //     overflow: hidden;
+            // }
+            @include text3(h2, null, #8A7676, null, left) {
+                //@class name,fz,color,opa,dir
+                padding: 15px 0;
+            }
+            ;
+            @include text3('.content a p', null, #888888, null, justify) {
+                //@class name,fz,color,opa,dir            
+                margin-bottom: 40px;
+                border-bottom: none;
+            }
+            ;
+            @include text3('.content p', null, #676767, null, justify) {
+                //@class name,fz,color,opa,dir                                    
+                border-bottom: 1px solid #A8A7A7;
+            }
+            ;
+            @include text3('.content .type p', null, #676767, null, justify) {
+                //@class name,fz,color,opa,dir                                    
+                color: #fff
+            }
+            ;
+            @include text4('i', #676767) {
+                &:nth-child(1) {
+                    margin-left: 45px;
+                }
+            }
+            ;
+        } //end of col-5
+        // =========== icon =============================
+        span {
+            font-size: 15px;
+            margin-right: 3px;
+            color: #898989;
+        }
+        i {
+            color: #FFA266;
+            font-size: 24px;
+            margin-right: 3px;
+        }
+        .fa-pencil {
+            color: #fff;
+        }
+        //=============================================
+        nav {
+            ul {
+                text-align: left;
+                padding-left: 30px;
+                ;
+                li {
+                    display: inline-block;
+                    margin-right: 40px;
+                    line-height: 30px;
+                    a {
+                        display: inline-block;
+                        font-size: $font-base * 1.3333;
+                        text-decoration: none;
+                        color: #666666;
+                        border-radius: 10px;
+                        padding: 5px;
+                    }
+                    a:hover {
+                        color: #fff;
+                        background: #70C8E9;
+                    }
+                } //end li
+            } //end ul        
+        } //end of nav
+    }//end of talk
+    //======== talk 02 ===============
+    @include wrapper(talk-02) {
+        #select-xs{
+            display: none;
+        }
+        .lightbox{
+            .talk-01{
+                .box-01{
+                    .content{
+                        padding-top: 0;
+                        padding-left:0; 
+                        top:2%;
+                    }
+                }
+            }
+        }
+        
+        @include row(1095.84px, 47.333px, 35.334px); //width, left/right, top/bottom        
+        @include btn_1(20px, #FFA266); //paddingLR,bg-color/border-color
+        .btn-f {
+            @include btn_2(0px, 16px, #70C8E9); //without class name, paddingTB paddingLR,bg-color/border-color
+            font-size: 15px;
+            padding: 0px 16px;
+            margin-top: 7px;
+        }
+        @include container($talk-02-container-max-with, $talk-02-container-top);
+    @include content($talk-02-content-max-width, $talk-02-content-top, $talk-02-content-left); //@max width, padding-top, padding-left    
+    a{
+        text-decoration: none;
+        color: #898989;
+    }
+    p {
+        font-size: $font-base;
+    }
+    h1 {
+        font-size: $font-base * 2.4; //24px
+        padding: 20px 0;
+    }
+    h2 {
+        font-size: $font-base * 1.4; //21px
+    }
+    h3 {
+        font-size: $font-base * 1.3333; //21px
+    }
+    h4 {
+        font-size: $font-base * 1.06666; //16px
+    }
+    %fz20 {
+        font-size: $font-base * 1.33333;
+    }
+    // =========== icon =============================
+    span {
+        font-size: 15px;
+        margin-right: 50px;
+        color: #898989;
+    }
+    i {
+        color: #FFA266;
+        font-size: 24px;
+        margin-right: 3px;
+    }
+    .fa-pencil {
+        color: #fff;
+    }
+    //============ 頭像===============================        
+    .memInfo {
+        li {
+            line-height: 2em;
+            color: #666666;
+        }
+    }
+    .memName {
+        li {
+            padding-left: 27px;
+            color: #666666;
+        }
+    }
+    //=============================================
+    nav {
+        li {
+            display: inline-block;
+            margin-right: 40px;
+            line-height: 30px;
+            a {
+                display: inline-block;
+                font-size: $font-base * 1.3333;
+                text-decoration: none;
+                color: #666666;
+                border-radius: 10px;
+                padding: 5px;
+            }
+            a:hover {
+                color: #fff;
+                background: #70C8E9;
+            }
+        }
+    }
+    textarea {
+        font-size: 20px;
+        border-radius: 10px;
+        width: 100%;
+        border: none;
+        font-family: "微軟正黑體";
+        height: 100px;
+        color: #AAA9A9;
+    }
+    textarea:focus{
+        outline: none;
+    }
+    .col-3 {
+        padding-left: 5px;
+    }
+    /*==== rr loop =============================*/
+    @include talk02_text();    
+    @include talk02_message('.r4');
+    @include talk02_message('.r5');
+    
+    /*============ row loop=================*/
+    @include talk02_for();
+    
+    }
+    // ======= talk 01 ========================
+    @include wrapper(talk-01) {
+        .content {
+            top: $content-top; //@_var.scss
+            left: $content-left; //@_var.scss
+        }
+        @include row(678.72px, 1.956%, 10px);
+        @include btn(50px);
+        $row_num:6;
+        @for $i from 2 through $row_num {
+            @if $i==6 {
+                .r#{$i} {
+                    margin-top: 24px;
+                }
+            }
+            @else {
+                .r#{$i} {
+                    margin-left: 4.35%;
+                    margin-right: 4.35%;
+                    margin-top: 20px;
+                }
+            }
+        }
+        textarea {
+            height: 100px;
+            &:focus{
+                outline: none;
+            }
+        }
+        
+//         .lightbox .talk-01{
+// 	width:600px;
+// 	height:300px;
+// 	background:white;
+// 	position:absolute;
+// 	top:0;
+// 	bottom:0;
+// 	left:0;
+// 	right:0;
+// 	margin:auto;
+//     z-index: 3;
+// }
+    }//end of talk 01
+    /* ============== 光箱 ================*/
+
+        .lightbox{
+            width:100vw;
+            height:100vh;
+            background:rgba(0,0,0,.5);
+            position:fixed;
+            top:0;
+            left:0;
+            display:none;
+            z-index:100;
+        }
+}

@@ -1,0 +1,41 @@
+@charset "UTF-8";
+$font-base: 15px;
+//========= pc ===========
+$red-color : #f00;
+$num : 10em;
+$small: 1.5em;
+$blue-color:blue;
+$content-top:10%;//talk-01 used  
+$content-left:28%;//talk-01 used
+
+$talk-02-container-max-with:1280px;
+$talk-02-container-top:143px;
+$talk-02-content-max-width:1095.84px;
+$talk-02-content-top:55px;
+$talk-02-content-left:8px;
+
+$talk-container-max-with:1280px;//最大寬度1280
+$talk-container-top:143px;
+$talk-content-max-width:1200px;//邊框左右各40px
+$talk-content-top:60px;
+$talk-content-left:0px;
+$talk-column-max-width:300px;//每個欄位300px
+$talk-column-margin-right:30px;//每個卡片間距30px
+
+// mobile
+$talk-xs-container-top:53px;
+$talk-xs-content-top:0px;
+$talk-xs-content-left:0px;
+
+
+$talk-04-container-max-with:1280px;//最大寬度1280
+$talk-04-container-top:100px;
+$talk-04-content-max-width:773.213px;
+$talk-04-content-top:40px;
+//========= mobile ==========
+$mobile: 767px;
+$tablet-min:768px;
+$tablet:1199px;
+$desktop:1200px;
+
+$mobile-content-top:-1%;//talk-01 used

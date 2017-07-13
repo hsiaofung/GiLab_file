@@ -1,0 +1,35 @@
+
+
+
+
+@mixin talk02_message($name){        
+    #{$name}{
+        .col-13 {
+            padding-left: 49px;
+        }
+        .cc2 {
+            text-align: right;
+        }
+        $row_num:2;
+        @for $i from 1 through $row_num {
+            .rr#{$i} {
+                padding: 0;
+                background: #fff;
+                color: #888888;
+                @if $i==1 {
+                    margin-bottom: 30px;
+                }
+                @else {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+        .time, .date {
+            font-weight: bold;
+            margin-right: 0px;
+        }
+        @content;
+    }//end of r4
+} 
+    
+       

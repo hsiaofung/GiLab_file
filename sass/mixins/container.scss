@@ -1,0 +1,10 @@
+@mixin container($conMaxWidth, $conMarginT){
+    .container{
+        width: 100%;
+        max-width: $conMaxWidth;
+        margin: auto;
+        margin-top:$conMarginT; 
+        background: #C2E4EC;
+        @content;
+    }    
+}

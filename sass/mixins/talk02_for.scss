@@ -1,0 +1,77 @@
+@mixin talk02_for(){
+    $row_num:8;
+    @for $i from 1 through $row_num {
+        @if $i==1 {
+            .r#{$i} {
+                border-radius: 0px;
+                background-color: #C2E4EC;
+                border: none;
+                max-width: 1280px;
+                text-align: center;
+                margin: auto;
+            }
+        }
+        @else if $i==2 {
+            .r#{$i} {
+                border-radius: 0px;
+                background-color: #B2DEEB;
+                border: none;
+                max-width: 1280px;
+                text-align: center;
+                margin: auto;
+                padding-top: 10px;
+                padding-left: 41px;
+                padding-bottom: 10px;
+            }
+        }
+        @else {
+            @if $i==8 {
+                .r#{$i} {
+                    background-color: #C2E4EC;
+                    text-align: center;
+                    padding-top: 0px;
+                    border: none;
+                }
+            }
+            @else if $i==3 {
+                .r#{$i} {
+                    border-radius: 10px;
+                    background-color: #fff;
+                    box-shadow: 1px 1px 3px #ccc;
+                    border: none;
+                    margin-bottom: 38px;
+                }
+            }
+            @else if $i==5 {
+                .r#{$i} {
+                    border-radius: 10px;
+                    background-color: #fff;
+                    box-shadow: 1px 1px 3px #ccc;
+                    border: none;
+                    padding-bottom: 0px;
+                }
+            }
+            @else if $i==6 {
+                .r#{$i} {
+                    background-color: #C2E4EC;
+                    border: none;
+                    margin-bottom: 38px;
+                    padding-bottom: 0px;
+                    padding-top: 10px;
+                    text-align: center;
+                    color: #AAA9A9;
+                }
+            }
+            @else {
+                .r#{$i} {
+                    border-radius: 10px;
+                    background-color: #fff;
+                    box-shadow: 1px 1px 3px #ccc;
+                    border: none;
+                    margin-bottom: 38px;
+                    padding-bottom: 0px;
+                }
+            }
+        }
+    }
+}

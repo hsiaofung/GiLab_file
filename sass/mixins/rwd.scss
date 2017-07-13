@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+@mixin respond-rwd($breakpoint){
+	@if $breakpoint=="mobile"{
+		@media all and (max-width:$mobile){
+			@content;
+		}
+	}
+	@else if $breakpoint == "tablet" {
+		@media all and (min-width: $tablet-min) and (max-width:$tablet){
+			@content;
+		}
+	}
+	@else if $breakpoint=="desktop"{
+		@media all and (min-width:$desktop){
+		    @content;
+		}
+	}
+}
